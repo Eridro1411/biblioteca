@@ -3,10 +3,10 @@ import App from './App.vue';
 
 import VueRouter from "vue-router";
 
-import List from "@/components/List.vue";
-import Detail from "@/components/Detail.vue";
-import Edit from "@/components/Edit.vue";
-import Create from "@/components/Create.vue";
+import List from "./components/List.vue";
+import Detail from "./components/Detail.vue";
+import Edit from "./components/Edit.vue";
+import Create from "./components/Create.vue";
 
 Vue.use(VueRouter)
 
@@ -14,26 +14,31 @@ Vue.config.productionTip = false
 
 const routes = [
   {
-    path:"/list",
-    component: List,
+    path: "/",
+    redirect: "/list"
   },
   {
-    path:"/detail",
-    component: Detail,
+    path: "/list",
+    component: List
   },
   {
-    path:"/edit",
-    component: Edit,
+    path: "/detail",
+    component: Detail
   },
   {
-    path:"/create",
-    component: Create,
-  }
-]
+    path: "/edit",
+    component: Edit
+  },
+  {
+    path: "/create",
+    component: Create
+  },
+],
 
-const router = new VueRouter(
+router = new VueRouter({
+  mode: "history",
   routes
-)
+})
 
 new Vue({
   router,
