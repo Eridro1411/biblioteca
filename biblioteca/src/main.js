@@ -1,8 +1,41 @@
 import Vue from 'vue';
 import App from './App.vue';
-import "style.css";
+
+import VueRouter from "vue-router";
+
+import List from "@/components/List.vue";
+import Detail from "@/components/Detail.vue";
+import Edit from "@/components/Edit.vue";
+import Create from "@/components/Create.vue";
+
+Vue.use(VueRouter)
+
 Vue.config.productionTip = false
 
+const routes = [
+  {
+    path:"/list",
+    component: List,
+  },
+  {
+    path:"/detail",
+    component: Detail,
+  },
+  {
+    path:"/edit",
+    component: Edit,
+  },
+  {
+    path:"/create",
+    component: Create,
+  }
+]
+
+const router = new VueRouter(
+  routes
+)
+
 new Vue({
+  router,
   render: h => h(App),
 }).$mount('#app')
