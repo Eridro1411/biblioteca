@@ -29,4 +29,18 @@ class BookController extends Controller
         $book = Book::find($id);
         return $book;
     }
+
+    public function edit($id){
+        $book = Book::find($id);
+        $newBook = new Book();
+        $newBook->title = $book->title;
+        $newBook->author = $book->author;
+        $newBook->ISBN = $book->ISBN;
+        $newBook->poster = $book->poster;
+        $newBook->genre = $book->genre;
+        $newBook->valutation = $book->valutation;
+
+        $newBook->save();
+        return $newBook;
+    }
 }

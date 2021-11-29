@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" class="w-full h-full">
     <Navigation></Navigation>
     <router-view></router-view>
   </div>
@@ -14,3 +14,9 @@ export default {
   }
 }
 </script>
+
+<style>
+body {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+</style>

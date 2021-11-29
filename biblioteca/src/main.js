@@ -3,6 +3,8 @@ import App from './App.vue';
 
 import VueRouter from "vue-router";
 
+import "style.css";
+
 import List from "./components/List.vue";
 import Detail from "./components/Detail.vue";
 import Edit from "./components/Edit.vue";

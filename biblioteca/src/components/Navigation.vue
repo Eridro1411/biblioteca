@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="flex items-center justify-center">
         <button @click="goToList()">Lista</button>
         <button @click="goToCreate()">Crea</button>
     </div>

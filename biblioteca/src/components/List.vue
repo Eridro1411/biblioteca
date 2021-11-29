@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="">
         <div v-for="(book,index) in books" :key="index">
             <div @click="goToDetail(book)">
                 <img :src="book.poster" alt="">
