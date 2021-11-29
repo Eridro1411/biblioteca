@@ -21,7 +21,7 @@ export default ({
     },
     methods:{
         goToEdit(book){
-            this.$router.push("/edit/"+ book.id)
+            this.$router.push("/edit/"+ book)
         }
     }
 })
